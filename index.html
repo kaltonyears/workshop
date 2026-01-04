@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kalton years 2010-2025</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagen/favicon.png">
+    
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ============================================
+           RESET Y CONFIGURACIÓN BÁSICA
+           ============================================ */
+        
+        /* Reset de márgenes, padding y box-sizing para todos los elementos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Variables CSS: colores y valores reutilizables en todo el sitio */
+        :root {
+            --azul: #6596df;
+			--gris: #856e53;
+            --rosa: #e48067;
+            --naranja: #FCBE75;
+            --blanco: #F6F6F4;
+            --marron: #C2A691;
+            --negro: #000000;
+            --verde: #55b665;
+            --dorado: #D6C287;
+            --card-bg: #1a1a1a;
+            --light-section: #F6F6F4;  /* Fondo para secciones claras */
+            --dark-section: #0d0d0d;   /* Fondo para secciones oscuras */
+        }
+
+        /* Estilos base del body */
+        body {
+            line-height: 1.6;
+            color: var(--negro);
+            background-color: var(--blanco);
+        }
+
+        /* ============================================
+           CONTAINER - Contenedor principal responsivo
+           ============================================ */
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Flexbox para el contenido del header */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ============================================
+           HEADER Y NAVEGACIÓN
+           ============================================ */
+        
+        /* Barra de navegación superior fija */
+        header {
+            background-color: var(--negro);
+            color: var(--blanco);
+            padding: 15px 0;
+            position: sticky;         /* Se mantiene visible al hacer scroll */
+            top: 0;
+            z-index: 1000;           /* Por encima de otros elementos */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid var(--verde);
+        }
+
+        /* Contenedor del logo con texto */
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Imagen del logo */
+        .logo-image {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+
+        /* Subtexto del logo */
+        .logo-subtext {
+            font-size: 0.85rem;
+            color: var(--azul);
+            font-weight: 400;
+        }
+
+        /* Menú hamburguesa para móviles (oculto por defecto) */
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--blanco);
+        }
+
+        /* Lista de navegación horizontal */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        /* Enlaces de navegación */
+        nav ul li a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        /* Cambio de color al pasar el mouse */
+        nav ul li a:hover {
+            color: var(--verde);
+        }
+
+        /* Línea animada debajo de los enlaces */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--verde);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        /* La línea se expande al pasar el mouse */
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* ============================================
+           IMAGEN SUPERIOR (POSTER)
+           ============================================ */
+        
+        .top-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;      /* Mantiene proporción de la imagen */
+        }
+
+        /* ============================================
+           HERO SECTION (Sección principal oscura)
+           ============================================ */
+        
+        .hero {
+            background: var(--dark-section);
+            color: var(--blanco);
+            padding: 120px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--dorado);
+        }
+
+        /* Título principal del hero */
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--blanco);
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Párrafo descriptivo del hero */
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--azul);
+            line-height: 1.7;
+        }
+
+        /* Contenedor de fecha y ubicación */
+        .date-location {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        /* Cajas individuales de fecha/ubicación */
+        .date-location div {
+            background: rgba(26, 26, 26, 0.85);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+            color: var(--blanco);
+            border: 2px solid var(--verde);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Iconos dentro de las cajas de fecha/ubicación */
+        .date-location i {
+            margin-right: 10px;
+            color: var(--dorado);
+        }
+
+        /* ============================================
+           BOTONES
+           ============================================ */
+        
+        /* Estilo de botón principal con gradiente */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--verde), #5fa86d);
+            color: var(--negro);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(120, 199, 133, 0.4);
+        }
+
+        /* Efecto hover en botones */
+        .btn:hover {
+            background: linear-gradient(135deg, var(--naranja), var(--rosa));
+            transform: translateY(-2px);
+            box-shadow: 0 7px 25px rgba(252, 190, 117, 0.5);
+        }
+
+        /* ============================================
+           SECCIONES GENERALES
+           ============================================ */
+        
+        /* Padding vertical para todas las secciones */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Títulos de sección centrados */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            position: relative;
+            font-weight: 700;
+        }
+
+        /* Línea decorativa debajo de los títulos */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* ============================================
+           ABOUT SECTION (Sección "Acerca de" - CLARA)
+           ============================================ */
+        
+        #about {
+            background-color: var(--light-section);
+            color: var(--negro);
+        }
+
+        #about .section-title {
+            color: var(--negro);
+        }
+
+        /* Gradiente para la línea decorativa */
+        #about .section-title::after {
+            background: linear-gradient(90deg, var(--rosa), var(--naranja));
+        }
+
+        /* Contenedor de contenido de About */
+        .about-content {
+            display: block;
+        }
+
+        /* Párrafos con texto justificado */
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--negro);
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Letra capital (primera letra grande) solo en el primer párrafo */
+        .about-text > p:first-child::first-letter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--verde);
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            margin-top: 6px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* ============================================
+           SPEAKERS SECTION (Sección de ponentes - OSCURA)
+           ============================================ */
+        
+        #speakers {
+            background-color: var(--dark-section);
+            color: var(--blanco);
+        }
+
+        #speakers .section-title {
+            color: var(--blanco);
+        }
+
+        #speakers .section-title::after {
+            background: linear-gradient(90deg, var(--verde), var(--dorado));
+        }
+
+        /* Grid de 2 columnas para los speakers */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta individual de cada speaker */
+        .speaker-card {
+            background: linear-gradient(135deg, var(--card-bg), #252525);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+            padding: 25px;
+        }
+
+        /* Efecto de elevación al pasar el mouse */
+        .speaker-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Colores de borde alternados para cada 4 tarjetas */
+        .speaker-card:nth-child(4n+1) {
+            border-color: var(--rosa);
+        }
+
+        .speaker-card:nth-child(4n+1):hover {
+            box-shadow: 0 8px 25px rgba(244, 152, 129, 0.4);
+        }
+
+        .speaker-card:nth-child(4n+2) {
+            border-color: var(--azul);
+        }
+
+        .speaker-card:nth-child(4n+2):hover {
+            box-shadow: 0 8px 25px rgba(175, 197, 231, 0.4);
+        }
+
+        .speaker-card:nth-child(4n+3) {
+            border-color: var(--verde);
+        }
+
+        .speaker-card:nth-child(4n+3):hover {
+            box-shadow: 0 8px 25px rgba(120, 199, 133, 0.4);
+        }
+
+        .speaker-card:nth-child(4n+4) {
+            border-color: var(--dorado);
+        }
+
+        .speaker-card:nth-child(4n+4):hover {
+            box-shadow: 0 8px 25px rgba(214, 194, 135, 0.4);
+        }
+
+        /* Información centrada del speaker */
+        .speaker-info {
+            text-align: center;
+        }
+
+        /* Nombre del speaker */
+        .speaker-name {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--blanco);
+            font-weight: 700;
+        }
+
+        /* Universidad del speaker */
+        .speaker-university {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Colores alternados para las universidades */
+        .speaker-card:nth-child(4n+1) .speaker-university {
+            color: var(--rosa);
+        }
+
+        .speaker-card:nth-child(4n+2) .speaker-university {
+            color: var(--azul);
+        }
+
+        .speaker-card:nth-child(4n+3) .speaker-university {
+            color: var(--verde);
+        }
+
+        .speaker-card:nth-child(4n+4) .speaker-university {
+            color: var(--dorado);
+        }
+
+        /* Título de la charla en cursiva */
+        .speaker-talk {
+            color: var(--blancol);
+            line-height: 1.6;
+            font-size: 1.15rem;
+            /*font-style: italic;*/
+        }
+
+        /* ============================================
+           SCHEDULE SECTION (Sección del programa - CLARA)
+           ============================================ */
+        
+        #schedule {
+            background-color: var(--light-section);
+            color: var(--negro);
+        }
+
+        #schedule .section-title {
+            color: var(--negro);
+        }
+
+        #schedule .section-title::after {
+            background: linear-gradient(90deg, var(--azul), var(--verde));
+        }
+
+        /* Botones de pestañas del programa */
+        .tab-btn {
+            background-color: white;
+            border: 2px solid var(--azul);
+            padding: 12px 28px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--negro);
+            transition: all 0.3s;
+            border-radius: 25px;
+            font-size: 0.95rem;
+        }
+
+        /* Pestaña activa */
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--verde), #5fa86d);
+            color: white;
+            border-color: var(--verde);
+        }
+
+        /* Hover en pestañas inactivas */
+        .tab-btn:hover:not(.active) {
+            background-color: var(--azul);
+            color: white;
+        }
+
+        /* Contenido de cada día (oculto por defecto) */
+        .tab-content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            display: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--marron);
+        }
+
+        /* Mostrar contenido de pestaña activa */
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Item individual del horario */
+        .schedule-item {
+            display: flex;
+            padding: 25px 0;
+            border-bottom: 2px solid rgba(194, 166, 145, 0.3);
+        }
+
+        /* Quitar borde del último item */
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Hora del evento */
+        .schedule-time {
+            flex: 0 0 150px;
+            font-weight: 700;
+            color: var(--dorado);
+            font-size: 1.05rem;
+        }
+
+        /* Detalles del evento */
+        .schedule-details h3 {
+            color: var(--negro);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .schedule-details p {
+            color: var(--negro);
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           REGISTRATION SECTION (Sección de registro - OSCURA)
+           ============================================ */
+        
+        .registration {
+            /* background-color: var(--dark-section);    Está en claro para el primer anuncio*/
+			background-color: var(--light-section);
+            /* color: var(--blanco);                     Está en negro para el primer anuncio*/
+			color: var(--negro);
+            border-top: 3px solid var(--rosa);
+            border-bottom: 3px solid var(--naranja);
+        }
+
+        .registration .section-title {
+            /* color: var(--blanco);                     Está en negro para el primer anuncio*/
+			color: var(--negro);
+        }
+
+        .registration .section-title::after {
+            background: linear-gradient(90deg, var(--verde), var(--dorado));
+        }
+
+	/* ============================================
+	   SPONSORS SECTION (Sección de logos)
+	   ============================================ */
+
+		.sponsors {
+		    background-color: var(--light-section);
+		    color: var(--negro);
+		    padding: 60px 0;
+		}
+
+		.sponsors-row {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    gap: 40px;
+		    margin: 30px 0;
+		    flex-wrap: wrap;
+		}
+
+		.sponsors-row img {
+    		max-width: 250px;
+    		max-height: 130px;
+    		width: auto;
+    		height: auto;
+    		object-fit: contain;
+		}
+
+		/* Segunda fila - cuadriplicar tamaño */
+		.sponsors-row:nth-child(3) img {
+		    max-width: 1000px;  /* 250 * 4 */
+		    max-height: 520px;  /* 130 * 4 */
+		}
+
+		/* Tercera fila - triplicar tamaño */
+		.sponsors-row:nth-child(5) img {
+		    max-width: 750px;  /* 250 * 3 */
+		    max-height: 390px;  /* 130 * 3 */
+		}
+
+		.sponsors-text {
+    		text-align: center;
+    		color: var(--negro);
+    		font-size: 1rem;
+    		margin: 20px auto 40px;
+   			max-width: 800px;
+    		line-height: 1.6;
+		}
+
+		@media (max-width: 768px) {
+    		.sponsors-row {
+    		    gap: 20px;
+    		}
+
+    		.sponsors-row img {
+    		    max-width: 180px;
+    		    max-height: 100px;
+    		}
+
+    		/* Segunda fila en móvil - cuadriplicar tamaño */
+		    .sponsors-row:nth-child(3) img {
+		        max-width: 720px;  /* 180 * 4 */
+		        max-height: 400px;  /* 100 * 4 */
+		    }
+
+		    /* Tercera fila en móvil - triplicar tamaño */
+		    .sponsors-row:nth-child(5) img {
+		        max-width: 540px;  /* 180 * 3 */
+		        max-height: 300px;  /* 100 * 3 */
+		    }
+
+    		.sponsors-text {
+        		font-size: 0.95rem;
+        		margin: 15px auto 30px;
+    		}
+		}
+
+        /* ============================================
+           FOOTER (Pie de página - OSCURO)
+           ============================================ */
+        
+        footer {
+            background: linear-gradient(180deg, var(--negro), var(--card-bg));
+            color: var(--blanco);
+            padding: 60px 0 30px;
+            border-top: 3px solid var(--azul);
+        }
+
+        /* Grid responsivo de 4 columnas */
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Títulos de columnas del footer */
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--blanco);
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 700;
+        }
+
+        /* Línea decorativa debajo de títulos de footer */
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        /* Colores alternados para las líneas decorativas */
+        .footer-column:nth-child(1) h3::after {
+            background-color: var(--rosa);
+        }
+
+        .footer-column:nth-child(2) h3::after {
+            background-color: var(--naranja);
+        }
+
+        .footer-column:nth-child(3) h3::after {
+            background-color: var(--verde);
+        }
+
+        .footer-column:nth-child(4) h3::after {
+            background-color: var(--dorado);
+        }
+
+        /* Párrafos del footer */
+        .footer-column p {
+            color: var(--marron);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Listas del footer */
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+            color: var(--azul);
+            line-height: 1.6;
+        }
+
+        /* Enlaces del footer */
+        .footer-column ul li a {
+            color: var(--azul);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--verde);
+        }
+
+        /* Iconos en listas del footer */
+        .footer-column ul li i {
+            margin-right: 10px;
+            color: var(--dorado);
+            width: 20px;
+        }
+
+        /* Contenedor de iconos sociales */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Iconos sociales individuales */
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background-color: rgba(120, 199, 133, 0.15);
+            border-radius: 50%;
+            color: var(--verde);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        /* Colores de bordes alternados para iconos sociales */
+        .social-icons a:nth-child(1) {
+            border-color: var(--azul);
+        }
+
+        .social-icons a:nth-child(1):hover {
+            background-color: var(--azul);
+            color: var(--negro);
+        }
+
+        .social-icons a:nth-child(2) {
+            border-color: var(--rosa);
+        }
+
+        .social-icons a:nth-child(2):hover {
+            background-color: var(--rosa);
+            color: var(--negro);
+        }
+
+        .social-icons a:nth-child(3) {
+            border-color: var(--naranja);
+        }
+
+        .social-icons a:nth-child(3):hover {
+            background-color: var(--naranja);
+            color: var(--negro);
+        }
+
+        .social-icons a:nth-child(4) {
+            border-color: var(--verde);
+        }
+
+        .social-icons a:nth-child(4):hover {
+            background-color: var(--verde);
+            color: var(--negro);
+        }
+
+        .social-icons a:nth-child(5) {
+            border-color: var(--dorado);
+        }
+
+        .social-icons a:nth-child(5):hover {
+            background-color: var(--dorado);
+            color: var(--negro);
+        }
+
+        /* Copyright en el footer */
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 2px solid var(--marron);
+            color: var(--marron);
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           ESTILOS ESPECIALES DE TEXTO
+           ============================================ */
+        
+        /* Títulos de comités */
+        .committee-title {
+            font-weight: 700;
+            color: var(--verde);
+            font-size: 1.15rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Paneles con contenido indentado y borde lateral */
+        .panel-content {
+            margin-left: 30px;
+            border-left: 3px solid var(--verde);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Enlaces de correo electrónico */
+        .email-link {
+            color: var(--verde);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--naranja);
+            text-decoration: underline;
+        }
+
+        /* Enlaces destacados tipo botón (ej: "HERE") */
+        .registration-link {
+            color: var(--verde);
+            text-decoration: none;
+            font-weight: 700;
+            background-color: rgba(120, 199, 133, 0.1);
+            padding: 3px 8px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: 1px solid var(--verde);
+        }
+
+        .registration-link:hover {
+            color: var(--blanco);
+            background-color: var(--verde);
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(120, 199, 133, 0.3);
+        }
+
+        /* Enlaces de texto con resaltado */
+        .highlight-link {
+            color: var(--verde);
+            text-decoration: none;
+            font-weight: 700;
+            background-color: rgba(120, 199, 133, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: 1px solid var(--verde);
+            cursor: pointer;
+        }
+
+        .highlight-link:hover {
+            color: var(--blanco);
+            background-color: var(--verde);
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(120, 199, 133, 0.3);
+        }
+
+        /* ============================================
+           MODALES (ventanas emergentes)
+           ============================================ */
+        
+        /* Modal base - Fondo oscuro que cubre toda la pantalla */
+        .modal {
+            display: none;              /* Oculto por defecto */
+            position: fixed;
+            z-index: 10000;            /* Por encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        /* Contenido del modal centrado */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--blanco);
+            color: var(--negro);
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--verde);
+        }
+
+        /* Título del modal */
+        .modal-content h3 {
+            color: var(--verde);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        /* Párrafos del modal */
+        .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        /* Contenedor de imágenes dentro del modal */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Imágenes dentro del modal */
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+
+        /* ============================================
+           SECCIÓN DE IMAGEN PRINCIPAL
+           ============================================ */
+        
+        .image-section {
+            position: relative;
+            background-color: var(--light-section);
+        }
+
+        /* Información debajo de la imagen principal */
+        .image-info {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-section);
+            color: var(--negro);
+        }
+
+        .image-info p {
+            margin: 0;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        /* Botón de cerrar modal (X) */
+        .close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            color: var(--blanco);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10001;
+            background-color: transparent;
+            border-radius: 0;
+            width: auto;
+            height: auto;
+            display: block;
+            border: none;
+        }
+
+        .close:hover {
+            color: var(--verde);
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        /* Animación de aparición suave */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN (Para móviles)
+           ============================================ */
+        
+        @media (max-width: 768px) {
+            /* Mostrar menú hamburguesa en móviles */
+            .mobile-menu {
+                display: block;
+                color: var(--blanco);
+            }
+
+            /* Menú de navegación vertical en móviles */
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--negro);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+                border-bottom: 2px solid var(--verde);
+            }
+            
+            /* Mostrar menú cuando está activo */
+            nav ul.active {
+                display: flex;
+            }
+            
+            /* Espaciado de items del menú móvil */
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            /* About en columna única */
+            .about-content {
+                flex-direction: column;
+            }
+            
+            /* Formulario en columna única */
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            /* Títulos más pequeños en móvil */
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            /* Hero más compacto */
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.05rem;
+            }
+            
+            /* Fecha/ubicación en columna */
+            .date-location {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            /* Menos padding en secciones */
+            section {
+                padding: 60px 0;
+            }
+
+            /* Formulario más compacto */
+            .registration-container {
+                padding: 30px 20px;
+            }
+
+            /* Horario en columna */
+            .schedule-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .schedule-time {
+                flex: none;
+            }
+
+            /* Speakers en una sola columna */
+            .speakers-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* ============================================
+           MODAL PARA IMAGEN DE MIAMI
+           ============================================ */
+        
+        #miamiModal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);  /* Fondo más oscuro */
+            animation: fadeIn 0.3s;
+        }
+
+        /* Contenedor especial para imagen grande */
+        #miamiModal .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95vw;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            padding: 0;
+            box-shadow: none;
+            overflow: hidden;
+        }
+
+        #miamiModal .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Imagen ajustada al contenedor */
+        #miamiModal img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Botón cerrar específico para modal de Miami */
+        #miamiModal .close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            color: var(--blanco);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10001;
+            background-color: transparent;
+            border-radius: 0;
+            width: auto;
+            height: auto;
+            display: block;
+            border: none;
+        }
+
+        #miamiModal .close:hover {
+            color: var(--verde);
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        /* ============================================
+           MODAL DE INFORMACIÓN
+           ============================================ */
+        
+        .info-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        .info-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--blanco);
+            color: var(--negro);
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--verde);
+        }
+
+        .info-modal-content h3 {
+            color: var(--verde);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .info-modal-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .info-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--negro);
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .info-close:hover {
+            color: var(--verde);
+        }
+
+        /* ============================================
+           CONTENEDOR DE COMITÉS
+           ============================================ */
+        
+        /* Dos columnas para los comités */
+        .committees-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .committee-column {
+            flex: 1;
+        }
+
+        .committee-column .committee-title {
+            margin-top: 0;
+        }
+
+        /* Comités en columna única en móviles */
+        @media (max-width: 768px) {
+            .committees-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* ============================================
+           COLORES DE PANELES
+           ============================================ */
+
+.panel-1 {
+    border-left-color: var(--verde);
+}
+
+.panel-2 {
+    border-left-color: var(--azul);
+}
+
+.panel-3 {
+    border-left-color: var(--rosa);
+}
+
+.panel-4 {
+    border-left-color: var(--gris);
+}
+
+/* Títulos de paneles con colores específicos */
+.panel-1 .committee-title {
+    color: var(--verde);
+}
+
+.panel-2 .committee-title {
+    color: var(--azul);
+}
+
+.panel-3 .committee-title {
+    color: var(--rosa);
+}
+
+.panel-4 .committee-title {
+    color: var(--gris);
+}
+
+/* Speakers por panel */
+.speaker-panel-1 {
+    border-color: var(--verde) !important;
+}
+
+.speaker-panel-1:hover {
+    box-shadow: 0 8px 25px rgba(120, 199, 133, 0.4) !important;
+}
+
+.speaker-panel-1 .speaker-university {
+    color: var(--verde) !important;
+}
+
+.speaker-panel-2 {
+    border-color: var(--azul) !important;
+}
+
+.speaker-panel-2:hover {
+    box-shadow: 0 8px 25px rgba(175, 197, 231, 0.4) !important;
+}
+
+.speaker-panel-2 .speaker-university {
+    color: var(--azul) !important;
+}
+
+.speaker-panel-3 {
+    border-color: var(--rosa) !important;
+}
+
+.speaker-panel-3:hover {
+    box-shadow: 0 8px 25px rgba(244, 152, 129, 0.4) !important;
+}
+
+.speaker-panel-3 .speaker-university {
+    color: var(--rosa) !important;
+}
+
+.speaker-panel-4 {
+    border-color: var(--gris) !important;
+}
+
+.speaker-panel-4:hover {
+    box-shadow: 0 8px 25px rgba(214, 194, 135, 0.4) !important;
+}
+
+.speaker-panel-4 .speaker-university {
+    color: var(--gris) !important;
+}
+
+/* ============================================
+   REGISTRATION FORM - Estilos del iframe
+   ============================================ */
+
+.registration-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.registration-container iframe {
+    width: 100% !important;
+    height: 80%;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.2);
+    transform-origin: top center;
+}
+
+@media (max-width: 768px) {
+    .registration-container iframe {
+        transform: scale(1);
+    }
+    
+    .registration-container {
+        height: 800px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .registration-container iframe {
+        transform: scale(1.2);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER Y NAVEGACIÓN PRINCIPAL
+         ============================================ -->
+    <header>
+        <div class="container header-content">
+            <!-- Logo con imagen y texto -->
+            <div class="logo">
+                <img src="imagen/logo.png" alt="Logo" class="logo-image">
+                <div>
+                    <div class="logo-text">The Kalton years 2010-2025</div>
+                    <div class="logo-subtext">A workshop in homage to Nigel Kalton</div>
+                </div>
+            </div>
+            <!-- Botón de menú móvil (hamburguesa) -->
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#speakers">Speakers</a></li>
+                    <!--<li><a href="#schedule">Program</a></li>-->
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#contact">More info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION (Sección de bienvenida principal)
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>The Kalton years 2010-2025</h1>
+            <p>A workshop in homage to Nigel Kalton</p>
+            
+            <!-- Información de fecha y ubicación -->
+            <div class="date-location">
+                <div><i class="far fa-calendar-alt"></i> May 19-22, 2026</div>
+                <a href="https://maps.google.com/?q=Instituto+de+Matemáticas+Universidad+de+Extremadura+Badajoz" target="_blank" style="text-decoration: none;">
+                    <div><i class="fas fa-map-marker-alt"></i> IMUEx, Badajoz, Spain</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         IMAGEN PRINCIPAL (POSTER) CON TEXTO INFORMATIVO
+         ============================================ -->
+    <div class="image-section">
+        <!-- Imagen principal del evento -->
+        <img src="imagen/Orpheus_The_Sandman.jpg" alt="Nigel Kalton Workshop" class="top-image" id="posterImage">
+        <!-- Texto con enlace para más información -->
+        <div class="image-info">
+            <p>Click <a href="#" class="highlight-link" id="imageInfoLink">HERE</a> for more info about this image.</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ABOUT SECTION (Información del workshop)
+         ============================================ -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <!-- Párrafo principal con letra capital -->
+                    <p>Nigel Kalton was an extraordinary mathematician and an important, influential source of inspiration for the Banext group at Extremadura -- not to mention how much those of us lucky enough to have met Nigel miss him. In May 2026, it will be twenty years since the fabulous <a href="#" class="highlight-link" id="miamiLink">Banach Spaces and their Applications in Analysis</a> conference in honor of Nigel's 60th birthday, held at Miami University, Oxford, Ohio; and eleven since its follow-up at the <a href="https://conferences.cirm-math.fr/1127.html" class="registration-link" target="_blank">CIRM</a> in Luminy. Following that tradition, we are organizing this workshop focused on Banach space theory and related areas.</p>
+                    <p>The workshop will be structured into four panels.</p>
+
+                    <!-- Panel 1: Sobre la vida y trabajo de Nigel -->
+                    <div class="panel-content panel-1">
+                        <p class="committee-title">Panel 1. About Nigel's life and work.</p>
+                        <p>Speakers: F. Albiac, J.M.F. Castillo, G. Godefroy, B. Radrianantoanina.</p>
+                    </div>
+
+                    <!-- Panel 2: Resultados sorprendentes -->
+                    <div class="panel-content panel-2">
+                        <p class="committee-title">Panel 2. These ones Nigel didn't see coming.</p>
+                        <p>Plenary lectures on results obtained after his passing that would probably have surprised him -- though this is hard to claim given his sharp mathematical intuition.</p>
+                        <p>Speakers: J.L. Ansorena, F. Cabello Sánchez, V. Ferenczi, G. Lancien, G. Plebanek, N. de Rancourt, P. Scholze, P. Tradacete.</p>
+                    </div>
+
+                    <!-- Panel 3: Avances en temas específicos -->
+                    <div class="panel-content panel-3">
+                        <p class="committee-title">Panel 3. Advances on selected topics.</p>
+                        <p>Invited talks about new advances in topics dear to Nigel.</p>
+                        <p>Speakers: F. Baudier, B.M. Braga, W.H.G. Correa, W. Cuellar, A. Fovelle, R. Pino, F. Sukochev.</p>
+                    </div>
+
+                    <!-- Panel 4: Comunicaciones de participantes -->
+                    <div class="panel-content panel-4">
+                        <p class="committee-title">Panel 4. Communications from participants.</p>
+                    </div>
+
+                    <!-- Información práctica y enlace a registro -->
+                    <p>The Workshop will take place at the <a href="https://maps.google.com/?q=Instituto+de+Matemáticas+Universidad+de+Extremadura+Badajoz" target="_blank" class="registration-link">Instituto de Matemáticas de la Universidad de Extremadura</a>, Badajoz, Spain, from Tuesday, May 19 until Friday, May 22, 2026. If you wish to participate please fill out the Registration form <a href="#registration" class="registration-link">HERE</a> and do not hesitate to contact the Organizing Committee or email  <a href="mailto:kaltonyears@gmail.com" class="email-link">kaltonyears@gmail.com</a> for any assistance.</p>
+
+					<!-- Comités organizador y científico en dos columnas -->
+                    <div class="committees-container">
+                        <div class="committee-column">
+                            <p class="committee-title">Organizing Committee:</p>
+                            <p>Félix Cabello Sánchez, <a href="mailto:fcabello@unex.es" class="email-link">fcabello@unex.es</a></p>
+                            <p>Javier Cabello Sánchez, <a href="mailto:coco@unex.es" class="email-link">coco@unex.es</a></p>
+							<p>Jesús M. F. Castillo, <a href="mailto:castillo@unex.es" class="email-link">castillo@unex.es</a></p>
+                            <p>Ricardo García, <a href="mailto:rgarcia@unex.es" class="email-link">rgarcia@unex.es</a></p>
+							<p>Raúl Martínez Bohórquez, <a href="mailto:raulmb@unex.es" class="email-link">raulmb@unex.es</a></p>
+                            <p>Daniel Morales González, <a href="mailto:danmorg@unex.es" class="email-link">danmorg@unex.es</a></p>
+							<p>Yolanda Moreno Salguero, <a href="mailto:ymoreno@unex.es" class="email-link">ymoreno@unex.es</a></p>
+                            <p>José Navarro Garmendia, <a href="mailto:navarrogarmendia@unex.es" class="email-link">navarrogarmendia@unex.es</a></p>
+                        </div>
+ 
+                        <div class="committee-column">
+                            <p class="committee-title">Scientific Committee:</p>
+                            <p>Fernando Albiac, <a href="mailto:fernando.albiac@unavarra.es" class="email-link">fernando.albiac@unavarra.es</a></p>
+                            <p>Jesús M. F. Castillo, <a href="mailto:castillo@unex.es" class="email-link">castillo@unex.es</a></p>
+                            <p>Gilles Godefroy, <a href="mailto:godefroy@imj-prg.fr" class="email-link">godefroy@imj-prg.fr</a></p>
+                            <p>Beata Radrianantoanina, <a href="mailto:randrib@miamioh.edu" class="email-link">randrib@miamioh.edu</a></p>
+                            <p class="committee-title">Local Staff:</p>
+                            <p>Álvaro Iglesias Cambero</p>
+							<p>Pedro Martín Jiménez</p>
+							<p>Emmanuel Moreno Mejía</p>
+                            <p>Jorge Rovira Pérez</p>
+							<p>Marina Polo Rodríguez</p>
+                            <p>Pablo Torrado López</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SPEAKERS SECTION (Ponentes del workshop)
+         ============================================ -->
+    <section id="speakers">
+        <div class="container">
+            <h2 class="section-title">Speakers</h2>
+            <!-- Grid de 2 columnas con speakers -->
+            <div class="speakers-grid">
+
+				<!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-1">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Fernando Albiac</h3>
+                        <div class="speaker-university">Universidad Pública de Navarra, España</div>
+                        <p class="speaker-talk">[Title to be announced]</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">José Luis Ansorena</h3>
+                        <div class="speaker-university">Universidad de la Rioja, España</div>
+                        <p class="speaker-talk">Lipschitz free spaces in the Kalton zone</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Florent Baudier</h3>
+                        <div class="speaker-university">Texas A&M University, USA</div>
+                        <p class="speaker-talk">[Title to be announced]</p>
+						<p class="speaker-talk"></p>(Online conference)</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Bruno M.Braga</h3>
+                        <div class="speaker-university">IMPA, Brasil</div>
+                        <p class="speaker-talk">On homeomorphisms between the spheres of ℓ<sub>∞</sub><sup>k</sup> and ℓ<sub>2</sub><sup>k</sup></p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Félix Cabello Sánchez</h3>
+                        <div class="speaker-university">Inst. Mat. Univ. Extremadura (IMUEX), España</div>
+                        <p class="speaker-talk">[Title to be announced]</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-1">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Jesús M.F. Castillo</h3>
+                        <div class="speaker-university">Inst. Mat. Univ. Extremadura (IMUEX), España</div>
+                        <p class="speaker-talk">Painted from memory</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Willian H.G. Corrêa</h3>
+                        <div class="speaker-university">Universidade de São Paulo, Brasil</div>
+                        <p class="speaker-talk">Hilbert spaces not isomorphic to their duals</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Wilson Cuellar</h3>
+                        <div class="speaker-university">Universidade de São Paulo, Brasil</div>
+                        <p class="speaker-talk">About algebras of operators on Z<sub>2</sub></p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Valentin Ferenczi</h3>
+                        <div class="speaker-university">Universidade de São Paulo, Brasil</div>
+                        <p class="speaker-talk">Ext<sup>2</sup>(ℓ<sub>2</sub>, ℓ<sub>2</sub>) is not 0</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Audrey Fovelle</h3>
+                        <div class="speaker-university">Texas A&M University, USA</div>
+                        <p class="speaker-talk">[Title to be announced]</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-1">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Gilles Godefroy</h3>
+                        <div class="speaker-university">Inst. Mat. Jussieu (IMJ), France</div>
+                        <p class="speaker-talk">MU golden years: Nigel Kalton's Columbia</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Gilles Lancien</h3>
+                        <div class="speaker-university">Université de Franche-Comté, France</div>
+                        <p class="speaker-talk">Nonlinear embeddings and asymptotic geometry of Banach spaces</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Raúl Pino</h3>
+                        <div class="speaker-university">Universidad de Oviedo, España</div>
+                        <p class="speaker-talk">Rochberg spaces as generalized Z<sub>2</sub></p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Grzegorz Plebanek</h3>
+                        <div class="speaker-university">Uniwersytet Wrocławski, Polska</div>
+                        <p class="speaker-talk">Twisted sums with c<sub>0</sub> and the CCKY problem</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-1">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Beata Radrianantoanina</h3>
+                        <div class="speaker-university">Miami University, USA</div>
+                        <p class="speaker-talk">[Title to be announced]</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Noé de Rancourt</h3>
+                        <div class="speaker-university">Université de Lille, France</div>
+                        <p class="speaker-talk">Ergodicity of the Kalton-Peck space</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Peter Scholze</h3>
+                        <div class="speaker-university">Universität Bonn, Deutschland</div>
+                        <p class="speaker-talk">Higher Ext groups of non-locally convex vector spaces</p>
+						<p class="speaker-talk"></p>(Online conference)</p>
+					</div>
+                </div>
+
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-3">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Fedor Sukochev</h3>
+                        <div class="speaker-university">University of New South Wales, Australia</div>
+                        <p class="speaker-talk">Regular traces on ideals in L(H)</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de speaker -->
+                <div class="speaker-card speaker-panel-2">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Pedro Tradacete</h3>
+                        <div class="speaker-university">ICMAT, España</div>
+                        <p class="speaker-talk">Progress in Banach Lattices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SCHEDULE SECTION (Programa del evento)
+         ============================================ -->
+<!--
+    <section id="schedule">
+        <div class="container">
+            <h2 class="section-title">Program</h2>
+            <!- Pestañas para cada día ->
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-tab="day1">Day 1 (May 19)</button>
+                <button class="tab-btn" data-tab="day2">Day 2 (May 20)</button>
+                <button class="tab-btn" data-tab="day3">Day 3 (May 21)</button>
+                <button class="tab-btn" data-tab="day4">Day 4 (May 22)</button>
+            </div>
+            
+            <!- Contenido del Día 1 (activo por defecto) ->
+            <div id="day1" class="tab-content active">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-details">
+                        <h3>Opening</h3>
+                        <p>Welcome</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">13:30 - 15:00</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">15:30 - 17:00</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!- Contenido del Día 2 ->
+            <div id="day2" class="tab-content">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">13:30 - 17:00</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!- Contenido del Día 3 ->
+            <div id="day3" class="tab-content">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">13:30 - 17:00</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!- Contenido del Día 4 ->
+            <div id="day4" class="tab-content">
+                <div class="schedule-item">
+                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">13:30 - 15:00</div>
+                    <div class="schedule-details">
+                        <h3>TBA</h3>
+                        <p>TBA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- ============================================
+         REGISTRATION SECTION (Sección de registro - OSCURA)
+         ============================================ -->
+	<section id="registration" class="registration">
+    	<div class="container">
+        	<h2 class="section-title">Registration</h2>
+        	<div class="registration-container">
+            	<iframe 
+                	src="https://docs.google.com/forms/d/e/1FAIpQLSez5TaEmlhvf8CUepQCVOx0QzI_1wwhuXqcgJ-c464q9p6AUw/viewform?embedded=true&rm=minimal" 
+                	frameborder="0" 
+                	marginheight="0" 
+                	marginwidth="0">
+                	Loading...
+            	</iframe>
+        	</div>
+   		</div>
+	</section>
+
+    <!-- ============================================
+         SPONSORS SECTION (Sección de logos)
+         ============================================ -->
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <!-- PRIMERA FILA -->
+            <div class="sponsors-row">
+                <img src="imagen/logos/uex.jpg" alt="Universidad de Extremadura">
+                <img src="imagen/logos/imuex.jpg" alt="Instituto de Matemáticas UEx">
+                <img src="imagen/logos/dpto.jpg" alt="Departamento de Matemáticas">
+            </div>
+
+            <p class="sponsors-text">Ayuda a Grupos  GR24056 y Proyecto de investigación IB24002</p>
+
+            <!-- SEGUNDA FILA -->
+            <div class="sponsors-row">
+                <img src="imagen/logos/ue_cabecera.png" alt="UE">
+            </div>
+
+            <p class="sponsors-text">Proyecto PID2023-146505NB-C21 financiado por MCIU/AEI/10.13039/5011000110331 y por el FEDER/UE.</p>
+
+            <!-- TERCERA FILA -->
+            <div class="sponsors-row">
+                <img src="imagen/logos/MCIU_AEI_UE.png" alt="MCIU_AEI_UE">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER (Pie de página - OSCURO)
+         ============================================ -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                Additional information will be posted soon.
+            </div>
+            
+            <div class="copyright">
+                <p>The Kalton years 2010-2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para imagen de Miami -->
+    <div id="miamiModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="image-container">
+                <img src="imagen/miami.jpg" alt="Banach Spaces Conference at Miami University">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para información de imagen -->
+    <div id="imageInfoModal" class="info-modal">
+        <div class="info-modal-content">
+            <span class="info-close">&times;</span>
+            <h3>About This Image</h3>
+            <p>This outstanding image is a slightly modified version of a drawing by the great artist Jill Thompson reimagining the myth of Orpheus. The image appears as panel 1 in p.4 of volumen 7, Brief Lives, of The Sandman, by Neil Gaiman, published by Vertigo/DC comics. The reproduction here is for non-commercial purposes and has been chosen for the workshop because of its quality and many meanings derived from the Brief Lives story.</p>
+            <p>Orpheus is a foundational myth in western culture. An extraordinarily gifted being (the singing of Orpheus was even able to move Hades and Persephone to tears). Maybe for that reason the Kindly Ones chased him and only let his head floating in the river. Neil Gaiman continues the history: a millenary order rescued the head and has kept it in custody to this day. Brief Lives begins with Andros, the current guardian, thinking: <em>It is a miracle, of course.</em> The miracle is, of course, to have been even near such an extraordinary talent.</p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // MENÚ MÓVIL - Toggle del menú hamburguesa
+        // ============================================
+        
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // ============================================
+        // TABS DEL PROGRAMA - Cambio entre días
+        // ============================================
+        
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // ============================================
+        // FORMULARIO DE REGISTRO - Validación y envío
+        // ============================================
+        
+        const registrationForm = document.getElementById('registrationForm');
+        
+        if(registrationForm) {
+            registrationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const firstName = document.getElementById('firstName').value;
+                const email = document.getElementById('email').value;
+                
+                if (firstName && email) {
+                    alert(`Thank you ${firstName}! Your registration request has been received. We will contact you at ${email} with further details.`);
+                    
+                    registrationForm.reset();
+                    
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        }
+        
+        // ============================================
+        // SMOOTH SCROLLING - Desplazamiento suave a secciones
+        // ============================================
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // ============================================
+        // MODAL DE MIAMI - Muestra imagen de conferencia anterior
+        // ============================================
+        
+        const miamiLink = document.getElementById('miamiLink');
+        const miamiModal = document.getElementById('miamiModal');
+        const miamiCloseBtn = document.querySelector('#miamiModal .close');
+        
+        miamiLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            miamiModal.style.display = 'block';
+        });
+        
+        miamiCloseBtn.addEventListener('click', function() {
+            miamiModal.style.display = 'none';
+        });
+        
+        // ============================================
+        // MODAL DE INFORMACIÓN DE IMAGEN - Muestra info del poster
+        // ============================================
+        
+        const imageInfoLink = document.getElementById('imageInfoLink');
+        const imageInfoModal = document.getElementById('imageInfoModal');
+        const infoCloseBtn = document.querySelector('#imageInfoModal .info-close');
+    
+        imageInfoLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            imageInfoModal.style.display = 'block';
+        });
+        
+        infoCloseBtn.addEventListener('click', function() {
+            imageInfoModal.style.display = 'none';
+        });
+        
+        // ============================================
+        // CERRAR MODALES AL HACER CLIC EN EL FONDO
+        // ============================================
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === miamiModal) {
+                miamiModal.style.display = 'none';
+            }
+            if (e.target === imageInfoModal) {
+                imageInfoModal.style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+</html>
