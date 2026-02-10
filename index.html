@@ -1384,6 +1384,102 @@
         transform: scale(1.2);
     }
 }
+
+/* ============================================
+   PAYMENT METHODS - Métodos de pago
+   ============================================ */
+
+.payment-methods {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods h1 {
+    color: var(--negro);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.payment-methods > p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--negro);
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.payment-option {
+    padding: 20px;
+    background: rgba(120, 199, 133, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--verde);
+}
+
+.payment-option h4 {
+    color: var(--negro);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.payment-option p {
+    color: var(--negro);
+    font-size: 1.05rem;
+    margin: 8px 0;
+    line-height: 1.8;
+}
+
+/* ============================================
+   INVOICES - Facturas
+   ============================================ */
+
+.invoices {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.invoices h1 {
+    color: var(--negro);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.invoices p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--negro);
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* ============================================
+   RESPONSIVE - Métodos de pago y facturas
+   ============================================ */
+
+@media (max-width: 768px) {
+    .payment-methods,
+    .invoices {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1462,7 +1558,7 @@
                     <!-- Panel 1: Sobre la vida y trabajo de Nigel -->
                     <div class="panel-content panel-1">
                         <p class="committee-title">Panel 1. About Nigel's life and work.</p>
-                        <p>Speakers: F. Albiac, J.M.F. Castillo, G. Godefroy, B. Radrianantoanina.</p>
+                        <p>Speakers: F. Albiac, J.M.F. Castillo, G. Godefroy, B. Randrianantoanina.</p>
                     </div>
 
                     <!-- Panel 2: Resultados sorprendentes -->
@@ -1845,7 +1941,45 @@
                 	Loading...
             	</iframe>
         	</div>
-   		</div>
+	        <!-- SECCIÓN DE MÉTODOS DE PAGO -->
+    	    <div class="payment-methods">
+        	    <h1>Payment Methods</h1>
+				<p>Registration is opened until April 30th.</p>
+				<p>Registration is free for invited speakers and for members of the Department of Mathematics at the University of Extremadura.</p>
+				<p>For other members, there is a registration fee of 200 €. This fee covers lunches, coffee breaks, a tour around Badajoz and the official dinner of Thursday.</p>
+            	<p>There are three available methods to complete your registration payment:</p>
+	            <div class="payment-options">
+    	            <div class="payment-option">
+            	        <h4>1. Bank Transfer</h4>
+						<p>Please use the following details for the transfer. All bank fees must be covered by the sender to ensure the full registration fee is received.</p>
+                	    <p> · IBAN: ES74.0049.6147.63.2210012477</p>
+						<p> · BIC/SWIFT: BSCHESMMXXX</p>
+						<p> · Beneficiary name: Universidad de Extremadura (Tax ID: Q0618001B)</p>
+						<p> · Bank: Banco Santander</p>
+                    	<p> · Transfer concept/reference: THE KALTON YEARS + Full Name of Participant</p>
+                    	<p> · Transfer amount: 200.00 EUR</p>
+                	</div>
+                	<div class="payment-option">
+                	    <h4>2. Credit/Debit Card (Online POS): </h4>
+                	    <p>You can pay via our online payment gateway (TPV) on the official events page <a href="https://eventos.unex.es/146611/detail/the-kalton-years-2010-2025-payment-via-creditdebit-card.html" target="_blank" class="registration-link">here</a>. The transaction will be processed through the University's Santander account:</p>
+						<p>	· Account Reference: ES68 0049 6147 6729 1001 3180</p>
+                	</div>
+                	<div class="payment-option">
+                	    <h4>3. Cash Payment (On-site): </h4>
+                	    <p>Payment in cash will be accepted at the conference venue.</p>
+						<p>Important Note: Please be aware that official invoices cannot be issued for cash payments made during the event.</p>
+                	</div>
+            	</div>
+        	</div>
+            <!-- SECCIÓN DE Facturas -->
+    	    <div class="invoices">
+        	    <h1>Invoicing and Proof of Payment</h1>
+            	<p>To receive a formal invoice, you must request it within 15 days of payment. Please specify whether the invoice should be issued to an institution (University, Institute, Company, etc.) or to the individual participant. In both cases, a proof of payment is required. Please send your request to kaltonyears@gmail.com with the following details:</p>
+				<p> · Tax Name: (Full name of the individual or the Institution).</p>
+				<p> · Tax ID: (NIF, CIF, or VAT Number).</p>
+				<p> · Full Billing Address: (Including city, postal code, and country).</p>
+        	</div>
+    	</div>
 	</section>
 
     <!-- ============================================
