@@ -1512,6 +1512,316 @@
 .preregistered-item:hover {
     opacity: 1;
 }
+
+/* ============================================
+   PRACTICAL INFO SECTION
+   ============================================ */
+
+#practical-info {
+    background-color: var(--light-section);
+    color: var(--negro);
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--verde);
+}
+
+#practical-info .section-title {
+    color: var(--negro);
+}
+
+#practical-info .section-title::after {
+    background: linear-gradient(90deg, var(--verde), var(--dorado));
+}
+
+.practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.practical-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.practical-card:hover {
+    transform: translateY(-4px);
+}
+
+/* --- Tarjeta congreso: ocupa las 2 columnas --- */
+.practical-card.card-congress {
+    border-color: var(--verde);
+    grid-column: 1 / -1;
+}
+
+.practical-card.card-congress:hover {
+    box-shadow: 0 8px 25px rgba(85, 182, 101, 0.25);
+}
+
+/* --- Tarjeta hoteles --- */
+.practical-card.card-hotels {
+    border-color: var(--verde);
+}
+
+.practical-card.card-hotels:hover {
+    box-shadow: 0 8px 25px rgba(85, 182, 101, 0.25);
+}
+
+/* --- Tarjeta transporte --- */
+.practical-card.card-transport {
+    border-color: var(--verde);
+}
+
+.practical-card.card-transport:hover {
+    box-shadow: 0 8px 25px rgba(85, 182, 101, 0.25);
+}
+
+/* --- Iconos --- */
+.practical-card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--verde);
+}
+
+/* --- Títulos --- */
+.practical-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--verde);
+}
+
+/* --- Párrafos --- */
+.practical-card p {
+    color: var(--negro);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+/* --- Listas --- */
+.practical-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.practical-card ul li {
+    color: var(--negro);
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1rem;
+}
+
+.practical-card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+/* --- Links --- */
+.practical-card .practical-link {
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(85, 182, 101, 0.08);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--verde);
+    transition: all 0.3s;
+}
+
+.practical-card .practical-link:hover {
+    color: white;
+    background-color: var(--verde);
+}
+
+/* --- Banner del congreso --- */
+.congress-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.congress-badge {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--verde), #3a9e50);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    min-width: 110px;
+}
+
+.congress-badge .badge-dates {
+    font-size: 1.1rem;
+    display: block;
+}
+
+.congress-badge .badge-label {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 4px;
+    opacity: 0.85;
+}
+
+.congress-body {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* --- Lista de hoteles --- */
+.hotel-list li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    padding-bottom: 8px;
+}
+
+.hotel-list li:last-child {
+    border-bottom: none;
+}
+
+.hotel-stars {
+    color: var(--dorado);
+    font-size: 0.85rem;
+    margin-left: 4px;
+}
+
+/* --- Acordeón hoteles --- */
+.hotel-accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    margin-bottom: 5px;
+}
+
+.hotel-accordion:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.hotel-accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+.hotel-accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.hotel-accordion-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hotel-accordion-header .hotel-stars {
+    color: var(--dorado);
+    font-size: 0.85rem;
+}
+
+.hotel-accordion-header strong {
+    font-size: 1rem;
+    color: var(--negro);
+}
+
+.hotel-accordion-arrow {
+    color: var(--verde);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] .hotel-accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.hotel-accordion-body {
+    padding: 0 0 15px 5px;
+    color: var(--negro);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    animation: fadeIn 0.25s ease;
+}
+
+.hotel-accordion-body ul {
+    margin-top: 8px;
+}
+
+.hotel-accordion-body .hotel-info-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.hotel-accordion-body .hotel-info-label {
+    font-weight: 700;
+    color: var(--verde);
+    min-width: 80px;
+}
+
+.hotel-accordion-body .hotel-prices {
+    background-color: rgba(85, 182, 101, 0.07);
+    border-left: 3px solid var(--verde);
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.hotel-accordion-body .hotel-prices li::before {
+    color: var(--verde);
+}
+
+.hotel-accordion-body .hotel-cancel {
+    background-color: rgba(255, 193, 7, 0.08);
+    border-left: 3px solid var(--dorado);
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   PRACTICAL INFO — RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .practical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practical-card.card-congress {
+        grid-column: auto;
+    }
+
+    .congress-banner {
+        flex-direction: column;
+    }
+
+    .congress-badge {
+        width: 100%;
+    }
+}
+
+
 </style>
 
 <!-- ============================================
@@ -1556,7 +1866,7 @@
                     <li><a href="#participants">Participants</a></li>
                     <!--<li><a href="#schedule">Program</a></li>-->
                     <li><a href="#registration">Registration</a></li>
-                    <li><a href="#contact">More info</a></li>
+                    <li><a href="#practical-info">Getting here</a></li>
                 </ul>
             </nav>
         </div>
@@ -2236,6 +2546,278 @@
 
         </div>
     </section>
+
+    <!-- ============================================
+         PRACTICAL INFO SECTION
+         ============================================ -->
+    <section id="practical-info">
+        <div class="container">
+            <h2 class="section-title">Practical Information</h2>
+
+            <div class="practical-grid">
+
+				<!-- CONGRESO EN FRANCIA -->
+                <div class="practical-card card-congress">
+                    <h3><i class="practical-card-icon fas fa-globe-europe"></i> Related Conference in France — The Week Before</h3>
+                    <div class="congress-banner">
+                        <div class="congress-badge">
+                            <span class="badge-dates">May 4–7</span>
+                            <span class="badge-label">2026 · France</span>
+                        </div>
+                        <div class="congress-body">
+                            <p>
+                                Two weeks before our workshop, the conference
+                                <strong>Banach Spaces and Their Operators</strong> will take place at
+                                <strong>Lille, France</strong> (May 4th-7th, 2026).
+                                Participants planning to attend both events may wish to
+                                arrange travel from France to Badajoz directly.
+                            </p>
+                            <p>
+                                More information:
+                                <a href="https://www.mathconf.org/bsto2026" class="practical-link" target="_blank">https://www.mathconf.org/bsto2026</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOTELES -->
+                <div class="practical-card card-hotels">
+                    <h3><i class="practical-card-icon fas fa-hotel"></i> Accommodation in Badajoz</h3>
+                    <p>We suggest the following hotels, all conveniently located near the city centre and the venue:</p>
+                    <ul class="hotel-list">
+                    <ul class="hotel-list">
+                        <li>
+                            <details class="hotel-accordion">
+                                <summary class="hotel-accordion-header">
+                                    <div class="hotel-accordion-left">
+                                        <strong>Hotel Río Badajoz</strong>
+                                        <span class="hotel-stars">★★★</span>
+                                    </div>
+                                    <i class="hotel-accordion-arrow fas fa-chevron-down"></i>
+                                </summary>
+                                <div class="hotel-accordion-body">
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Address:</span>
+                                        <span>Avenida Adolfo Díaz Ambrona, 13, 06006 Badajoz</span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Phone:</span>
+                                        <span><a href="tel:+34924272600" class="practical-link">+34 924 27 26 00</a></span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Website:</span>
+                                        <span><a href="https://www.eurostarshotels.com/hotel-rio-badajoz.html?referer_code=lb0gg00yx&utm_source=google&utm_medium=business&utm_campaign=lb0gg00yx" class="practical-link" target="_blank">hotel-rio-badajoz.com</a></span>
+                                    </div>
+
+                                    <ul class="hotel-prices">
+                                        <li>Premium Double Room — Single use (DUI): <strong>74,00 €</strong>/night (VAT incl.)</li>
+                                        <li>Premium Double Room — 2 beds: <strong>79,00 €</strong>/night (VAT incl.)</li>
+                                        <li>Buffet breakfast (optional): <strong>8,00 €</strong>/person (VAT incl.)</li>
+                                        <li>Parking: <strong>9,00 €</strong>/day</li>
+                                    </ul>
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Booking:</span>
+                                        <span>Send an email to <a href="mailto:hola@orexco.net" class="practical-link">hola@orexco.net</a></span>
+                                    </div>
+
+                                    <div class="hotel-cancel">
+                                        <strong>Cancellation policy:</strong> Free cancellation up to 72 hours before arrival.
+                                        After this period, the first night will be charged.<br>
+                                        <strong>Check-in:</strong> from 14:00
+                                    </div>
+
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="hotel-accordion">
+                                <summary class="hotel-accordion-header">
+                                    <div class="hotel-accordion-left">
+                                        <strong>Hotel Tres Campanas</strong>
+                                        <span class="hotel-stars">★★★★</span>
+                                    </div>
+                                    <i class="hotel-accordion-arrow fas fa-chevron-down"></i>
+                                </summary>
+                                <div class="hotel-accordion-body">
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Address:</span>
+                                        <span>Calle Duque de San German, 6, 06001 Badajoz</span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Phone:</span>
+                                        <span><a href="tel:+34924290934" class="practical-link">+34 924 29 09 34</a></span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Website:</span>
+                                        <span><a href="https://www.hotel3campanas.com" class="practical-link" target="_blank">hotel3campanas.com</a></span>
+                                    </div>
+
+                                    <ul class="hotel-prices">
+                                        <li>Promotional code: <strong>CONUEX26</strong></li>
+                                        <li>Applicable only to bookings made through the website</li>
+                                        <li>Subject to availability at the time of booking</li>
+                                    </ul>
+
+                                    <div class="hotel-cancel">
+                                        <strong>Cancellation policy:</strong> Free cancellation up to 48 hours before arrival.
+                                        After this period or in case of no-show, one night will be charged.
+                                    </div>
+
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="hotel-accordion">
+                                <summary class="hotel-accordion-header">
+                                    <div class="hotel-accordion-left">
+                                        <strong>Hotel Badajoz Center</strong>
+                                        <span class="hotel-stars">★★★★</span>
+                                    </div>
+                                    <i class="hotel-accordion-arrow fas fa-chevron-down"></i>
+                                </summary>
+                                <div class="hotel-accordion-body">
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Address:</span>
+                                        <span>Avenida Damián Téllez Lafuente, 15, 06010 Badajoz</span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Phone:</span>
+                                        <span><a href="tel:+34924212000" class="practical-link">+34 924 21 20 00</a></span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Website:</span>
+                                        <span><a href="https://www.hotelescenter.es/hotel-badajoz-center/" class="practical-link" target="_blank">hotel-badajoz-center.com</a></span>
+                                    </div>
+
+                                    <ul class="hotel-prices">
+                                        <li>Promotional code: <strong>THEKALTONYEARS</strong></li>
+                                        <li>Discount: <strong>5% off</strong> the best available rate</li>
+                                    </ul>
+
+                                    <div class="hotel-cancel">
+                                        <strong>Payment and cancellation policy:</strong> According to the hotel's website conditions.
+                                    </div>
+
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="hotel-accordion">
+                                <summary class="hotel-accordion-header">
+                                    <div class="hotel-accordion-left">
+                                        <strong>Sercotel Gran Hotel Zurbarán</strong>
+                                        <span class="hotel-stars">★★★★</span>
+                                    </div>
+                                    <i class="hotel-accordion-arrow fas fa-chevron-down"></i>
+                                </summary>
+                                <div class="hotel-accordion-body">
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Address:</span>
+                                        <span>Calle Gómez de Solís, 1, 06001 Badajoz</span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Phone:</span>
+                                        <span><a href="tel:+34924001400" class="practical-link">+34 924 00 14 00</a></span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Website:</span>
+                                        <span><a href="https://www.sercotelhoteles.com" class="practical-link" target="_blank">sercotelhoteles.com</a></span>
+                                    </div>
+
+                                    <ul class="hotel-prices">
+                                        <li>Promotional code: <strong>THEKALTON2026</strong></li>
+                                        <li>Discount: <strong>additional 5% off</strong> the best available online rate at the time of booking</li>
+                                        <li>Code valid until <strong>01/05/2026</strong></li>
+                                    </ul>
+
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="hotel-accordion">
+                                <summary class="hotel-accordion-header">
+                                    <div class="hotel-accordion-left">
+                                        <strong>Hotel Turia Badajoz</strong>
+                                        <span class="hotel-stars">★★★★</span>
+                                    </div>
+                                    <i class="hotel-accordion-arrow fas fa-chevron-down"></i>
+                                </summary>
+                                <div class="hotel-accordion-body">
+
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Address:</span>
+                                        <span>Avenida Augusto Vázquez, 2, 06006 Badajoz</span>
+                                    </div>
+                                    <div class="hotel-info-row">
+                                        <span class="hotel-info-label">Website:</span>
+                                        <span><a href="https://www.turiahotels.es" class="practical-link" target="_blank">turiahotels.es</a></span>
+                                    </div>
+
+                                    <ul class="hotel-prices">
+                                        <li>Promotional code: <strong>OREXCO</strong> (for bookings made through the hotel's website)</li>
+                                        <li>The discount is applied to the rates available at the time of booking</li>
+                                    </ul>
+
+                                    <div class="hotel-cancel">
+                                        <strong>Payment policy:</strong> Payment upon arrival at the hotel. Credit card required only as a guarantee.<br><br>
+                                        <strong>Cancellation policy:</strong> Free cancellation until 00:00 on the day before arrival.
+                                        After this period, 100% of the reservation amount will be charged.
+                                        Also applicable in case of no-show or early departure.
+                                    </div>
+
+                                </div>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CÓMO LLEGAR -->
+                <div class="practical-card card-transport">
+                    <h3><i class="practical-card-icon fas fa-route"></i> Getting to Badajoz</h3>
+                    <ul>
+                        <li>
+                            <strong>By plane:</strong> The nearest airports are
+                            <strong>Badajoz Airport (BJZ)</strong> — 15 min from the city —
+                            or <strong>Seville (SVQ)</strong> (~180 km) and
+                            <strong>Lisbon (LIS)</strong> (~240 km), both with regular bus/car connections.
+                        </li>
+                        <li>
+                            <strong>By train:</strong> Badajoz is served by Renfe with connections
+                            to Madrid, Cáceres and Mérida.
+                            <a href="https://www.renfe.com" class="practical-link" target="_blank">renfe.com</a>
+                        </li>
+                        <li>
+                            <strong>By bus:</strong> Regular long-distance coaches operate between
+                            Badajoz and Madrid, Lisbon, Seville and other cities.
+                            <a href="https://www.alsa.com" class="practical-link" target="_blank">alsa.com</a>
+                        </li>
+                        <li>
+                            <strong>By car:</strong> Badajoz is located on the A-5 motorway
+                            (Madrid–Lisbon corridor), approx. 4 h from Madrid and
+                            2.5 h from Lisbon.
+                        </li>
+                        <li>
+                            <strong>From France:</strong> A popular route is
+                            Bordeaux → San Sebastián → Madrid → Badajoz (A-5).
+                        </li>
+                    </ul>
+                    <p style="margin-top:15px;">
+                        <a href="https://maps.google.com/?q=Instituto+de+Matemáticas+Universidad+de+Extremadura+Badajoz"
+                           class="practical-link" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> View venue on Google Maps
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <!-- ============================================
          FOOTER (Pie de página - OSCURO)
