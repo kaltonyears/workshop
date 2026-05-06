@@ -447,6 +447,7 @@
         #schedule {
             background-color: var(--light-section);
             color: var(--negro);
+            border-top: 3px solid var(--dorado);
         }
 
         #schedule .section-title {
@@ -1860,11 +1861,10 @@ details[open] .hotel-accordion-arrow {
             <!-- Menú de navegación principal -->
             <nav>
                 <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#speakers">Speakers</a></li>
                     <li><a href="#participants">Participants</a></li>
-                    <!--<li><a href="#schedule">Program</a></li>-->
+                    <li><a href="#schedule">Program</a></li>
                     <li><a href="#registration">Registration</a></li>
                     <li><a href="#practical-info">Practical Info</a></li>
                 </ul>
@@ -2344,46 +2344,72 @@ details[open] .hotel-accordion-arrow {
     <!-- ============================================
          SCHEDULE SECTION (Programa del evento)
          ============================================ -->
-<!--
+
     <section id="schedule">
         <div class="container">
             <h2 class="section-title">Program</h2>
             <!- Pestañas para cada día ->
             <div class="schedule-tabs">
-                <button class="tab-btn active" data-tab="day1">Day 1 (May 19)</button>
-                <button class="tab-btn" data-tab="day2">Day 2 (May 20)</button>
-                <button class="tab-btn" data-tab="day3">Day 3 (May 21)</button>
-                <button class="tab-btn" data-tab="day4">Day 4 (May 22)</button>
+                <button class="tab-btn active" data-tab="day1">Tuesday (May 19)</button>
+                <button class="tab-btn" data-tab="day2">Wednesday (May 20)</button>
+                <button class="tab-btn" data-tab="day3">Thursday (May 21)</button>
+                <button class="tab-btn" data-tab="day4">Friday (May 22)</button>
             </div>
             
             <!- Contenido del Día 1 (activo por defecto) ->
             <div id="day1" class="tab-content active">
                 <div class="schedule-item">
-                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-time">09:15 - 09:30</div>
                     <div class="schedule-details">
-                        <h3>Opening</h3>
+                        <h3>Registration and Opening</h3>
                         <p>Welcome</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-time">09:30 - 09:55</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Fernando Albiac</h3>
+                        <p>Topics and beyond, mathematics and friendship with Nigel Kalton</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">13:30 - 15:00</div>
+                    <div class="schedule-time">10:05 - 10:50</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Grzegorz Plebanek</h3>
+                        <p>Twisted sums with c<sub>0</sub> and the CCKY problem</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">15:30 - 17:00</div>
+                    <div class="schedule-time">10:50 - 11:15</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Coffee break</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:15 - 12:00</div>
+                    <div class="schedule-details">
+                        <h3>Peter Scholze (Online)</h3>
+                        <p>Liquid functional analysis</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:05 - 12:50</div>
+                    <div class="schedule-details">
+                        <h3>Willian H.G. Corrêa</h3>
+                        <p>Twisted Hilbert spaces not isomorphic to their duals</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:55 - 13:40</div>
+                    <div class="schedule-details">
+                        <h3>Félix Cabello Sánchez</h3>
+                        <p>The Serre closure of Banach spaces</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">14:00</div>
+                    <div class="schedule-details">
+                        <h3>Lunch</h3>
                     </div>
                 </div>
             </div>
@@ -2391,24 +2417,78 @@ details[open] .hotel-accordion-arrow {
             <!- Contenido del Día 2 ->
             <div id="day2" class="tab-content">
                 <div class="schedule-item">
-                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-time">09:15 - 09:55</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Beata Randrianantoanina</h3>
+                        <p>Nonlinear type and metric embeddings of lamplighter metric spaces</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-time">10:05 - 10:50</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Noé de Rancourt</h3>
+                        <p>Ergodicity of the Kalton-Peck space</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">13:30 - 17:00</div>
+                    <div class="schedule-time">10:50 - 11:15</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Coffee break</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:15 - 12:00</div>
+                    <div class="schedule-details">
+                        <h3>Florent Baudier (Online)</h3>
+                        <p>The Kalton program</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:05 - 12:50</div>
+                    <div class="schedule-details">
+                        <h3>Raúl Pino</h3>
+                        <p>Rochberg spaces as generalized Z<sub>2</sub></p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:55 - 13:40</div>
+                    <div class="schedule-details">
+                        <h3>Wilson Cuellar</h3>
+                        <p>About algebras of operators on Z<sub>2</sub></p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">14:00</div>
+                    <div class="schedule-details">
+                        <h3>Lunch</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">15:45 - 16:10</div>
+                    <div class="schedule-details">
+                        <h3>María Ángeles Japón</h3>
+                        <p>The property M of Kalton, type functions and their applications to fixed point theory</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">16:15 - 16:40</div>
+                    <div class="schedule-details">
+                        <h3>Eugene Bilokopytov</h3>
+                        <p>Von Neumann-Maharam problem for vector lattices</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">16:45 - 17:10</div>
+                    <div class="schedule-details">
+                        <h3>Sofya S. Masharipova</h3>
+                        <p>Non-commutative L<sub>p</sub>-spaces associated with real von Neumann algebras (with Shukhrat M. Usmanov, UPJ)</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">17:15 - 17:40</div>
+                    <div class="schedule-details">
+                        <h3>Rishit R. Rajpopat</h3>
+                        <p>On Bhatia-Semrl Property, Strong Subdifferentiability and Essential Norm of Operators on Banach Spaces</p>
                     </div>
                 </div>
             </div>
@@ -2416,24 +2496,62 @@ details[open] .hotel-accordion-arrow {
             <!- Contenido del Día 3 ->
             <div id="day3" class="tab-content">
                 <div class="schedule-item">
-                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-time">09:30 - 09:55</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Jesús M.F. Castillo</h3>
+                        <p>Painted from memory</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-time">10:05 - 10:50</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Willian H.G. Corrêa</h3>
+                        <p>Two steps into the homology of ℓ<sub>2</sub></p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">13:30 - 17:00</div>
+                    <div class="schedule-time">10:50 - 11:15</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Coffee break</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:15 - 12:00</div>
+                    <div class="schedule-details">
+                        <h3>Bruno M. Braga (Online)</h3>
+                        <p>On homeomorphisms between the spheres of ℓ<sub>∞</sub><sup>k</sup> and ℓ<sub>2</sub><sup>k</sup></p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:05 - 12:50</div>
+                    <div class="schedule-details">
+                        <h3>Pedro Tradacete</h3>
+                        <p>Progress in Banach lattices</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:55 - 13:40</div>
+                    <div class="schedule-details">
+                        <h3>Audrey Fovelle</h3>
+                        <p>The asymptotic Enflo problem</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">14:00</div>
+                    <div class="schedule-details">
+                        <h3>Lunch</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">18:00</div>
+                    <div class="schedule-details">
+                        <h3>Tour</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">21:00</div>
+                    <div class="schedule-details">
+                        <h3>Dinner</h3>
                     </div>
                 </div>
             </div>
@@ -2441,30 +2559,63 @@ details[open] .hotel-accordion-arrow {
             <!- Contenido del Día 4 ->
             <div id="day4" class="tab-content">
                 <div class="schedule-item">
-                    <div class="schedule-time">09:00 - 10:30</div>
+                    <div class="schedule-time">09:30 - 09:55</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Giulia Cardoso Fantato</h3>
+                        <p>Uniform homeomorphisms and interpolation of families of Banach spaces</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">10:45 - 12:15</div>
+                    <div class="schedule-time">10:00 - 10:25</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>David Muñoz Lahoz</h3>
+                        <p>Free Banach f-algebras</p>
                     </div>
                 </div>
                 <div class="schedule-item">
-                    <div class="schedule-time">13:30 - 15:00</div>
+                    <div class="schedule-time">10:30 - 10:55</div>
                     <div class="schedule-details">
-                        <h3>TBA</h3>
-                        <p>TBA</p>
+                        <h3>Wiesław Kubiś</h3>
+                        <p>Generic operators</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:50 - 11:30</div>
+                    <div class="schedule-details">
+                        <h3>Coffee break</h3>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:30 - 11:55</div>
+                    <div class="schedule-details">
+                        <h3>Antonio Avilés López</h3>
+                        <p>Transfinite Daugavet property</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:05 - 12:50</div>
+                    <div class="schedule-details">
+                        <h3>José Luis Ansorena</h3>
+                        <p>Lipschitz free spaces in the Kalton zone</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:55 - 13:40</div>
+                    <div class="schedule-details">
+                        <h3>Gilles Lancien</h3>
+                        <p>Nonlinear embeddings and asymptotic geometry of Banach spaces</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">13:45</div>
+                    <div class="schedule-details">
+                        <h3>Closing</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
--->
+
     <!-- ============================================
          REGISTRATION SECTION (Sección de registro - OSCURA)
          ============================================ -->
