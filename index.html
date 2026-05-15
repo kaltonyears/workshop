@@ -1505,6 +1505,47 @@
     margin: 10px 0 50px 0;
 }
 
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.participant-item {
+    background: white;
+    border-left: 4px solid var(--verde);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.participant-name {
+    display: block;
+    color: var(--negro);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.participant-affiliation {
+    display: block;
+    color: var(--gris);
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.participant-email {
+    display: inline-block;
+    color: var(--verde);
+    text-decoration: none;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.participant-email:hover {
+    text-decoration: underline;
+}
+
 .preregistered-item {
     opacity: 0.65;
     border-left-color: var(--gris) !important;
@@ -2155,160 +2196,204 @@ details[open] .hotel-accordion-arrow {
                 <h3 class="participants-subtitle">Confirmed Participants</h3>
                 <div class="participants-grid">
                     <div class="participant-item">
-                        <span class="participant-name">Fernando Albiac,</span>
+                        <span class="participant-name">Fernando Albiac</span>
                         <span class="participant-affiliation">Universidad Pública de Navarra, España</span>
+                        <a class="participant-email" href="mailto:fernando.albiac@unavarra.es">fernando.albiac@unavarra.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">José Luis Ansorena,</span>
+                        <span class="participant-name">José Luis Ansorena</span>
                         <span class="participant-affiliation">Universidad de la Rioja, España</span>
+                        <a class="participant-email" href="mailto:joseluis.ansorena@unirioja.es">joseluis.ansorena@unirioja.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Antonio Avilés López,</span>
+                        <span class="participant-name">Antonio Avilés López</span>
                         <span class="participant-affiliation">Universidad de Murcia, España</span>
+                        <a class="participant-email" href="mailto:aviles79@gmail.com">aviles79@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Florent Baudier,</span>
-                        <span class="participant-affiliation">Texas A&M University, USA</span>
+                        <span class="participant-name">Florent Baudier</span>
+                        <span class="participant-affiliation">Texas A&amp;M University, USA</span>
+                        <a class="participant-email" href="mailto:florent@tamu.edu">florent@tamu.edu</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Glenier Bello,</span>
+                        <span class="participant-name">Glenier Bello</span>
                         <span class="participant-affiliation">Universidad de Zaragoza, España</span>
+                        <a class="participant-email" href="mailto:gbello@unizar.es">gbello@unizar.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Bruno M. Braga,</span>
+                        <span class="participant-name">Bruno M. Braga</span>
                         <span class="participant-affiliation">IMPA, Brasil</span>
+                        <a class="participant-email" href="mailto:demendoncabraga@gmail.com">demendoncabraga@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Félix Cabello Sánchez,</span>
+                        <span class="participant-name">Félix Cabello Sánchez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:fcabello@unex.es">fcabello@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Javier Cabello Sánchez,</span>
+                        <span class="participant-name">Javier Cabello Sánchez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:coco@unex.es">coco@unex.es</a>
                     </div>
-					<div class="participant-item">
-                        <span class="participant-name">Giulia Cardoso Fantato,</span>
+                    <div class="participant-item">
+                        <span class="participant-name">Giulia Cardoso Fantato</span>
                         <span class="participant-affiliation">Instituto de Matemática e Estatística da Universidade de São Paulo, Brasil</span>
+                        <a class="participant-email" href="mailto:giulia.fantato@ime.usp.br">giulia.fantato@ime.usp.br</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Jesús M.F. Castillo,</span>
+                        <span class="participant-name">Jesús M.F. Castillo</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:castillo@unex.es">castillo@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Willian H.G. Corrêa,</span>
+                        <span class="participant-name">Willian H.G. Corrêa</span>
                         <span class="participant-affiliation">Universidade de São Paulo, Brasil</span>
+                        <a class="participant-email" href="mailto:willhans@icmc.usp.br">willhans@icmc.usp.br</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Wilson Cuellar,</span>
+                        <span class="participant-name">Wilson Cuellar</span>
                         <span class="participant-affiliation">Universidade de São Paulo, Brasil</span>
+                        <a class="participant-email" href="mailto:cuellar@ime.usp.br">cuellar@ime.usp.br</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Audrey Fovelle,</span>
-                        <span class="participant-affiliation">Texas A&M University, USA</span>
+                        <span class="participant-name">Audrey Fovelle</span>
+                        <span class="participant-affiliation">Texas A&amp;M University, USA</span>
+                        <a class="participant-email" href="mailto:afovelle@tamu.edu">afovelle@tamu.edu</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Ricardo García,</span>
+                        <span class="participant-name">Ricardo García</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:rgarcia@unex.es">rgarcia@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Gilles Godefroy,</span>
+                        <span class="participant-name">Gilles Godefroy</span>
                         <span class="participant-affiliation">Inst. Mat. Jussieu (IMJ), France</span>
+                        <a class="participant-email" href="mailto:godefroy@math.jussieu.fr">godefroy@math.jussieu.fr</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Álvaro Iglesias Cambero,</span>
+                        <span class="participant-name">Álvaro Iglesias Cambero</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:aiglesiati@alumnos.unex.es">aiglesiati@alumnos.unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">María Ángeles Japón,</span>
+                        <span class="participant-name">María Ángeles Japón</span>
                         <span class="participant-affiliation">Instituto de Matemáticas de la Universidad de Sevilla (IMUS), España</span>
+                        <a class="participant-email" href="mailto:japon@us.es">japon@us.es</a>
                     </div>
-					<div class="participant-item">
-                        <span class="participant-name">Javier Laguna Ricart,</span>
+                    <div class="participant-item">
+                        <span class="participant-name">Javier Laguna Ricart</span>
                         <span class="participant-affiliation">Universidad de Murcia, España</span>
+                        <a class="participant-email" href="mailto:javierl4guna@gmail.com">javierl4guna@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Gilles Lancien,</span>
+                        <span class="participant-name">Gilles Lancien</span>
                         <span class="participant-affiliation">Université de Franche-Comté, France</span>
+                        <a class="participant-email" href="mailto:gilles.lancien@math.cnrs.fr">gilles.lancien@math.cnrs.fr</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Pedro Martín Jiménez,</span>
+                        <span class="participant-name">Pedro Martín Jiménez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:pjimenez@unex.es">pjimenez@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Raúl Martínez Bohórquez,</span>
+                        <span class="participant-name">Raúl Martínez Bohórquez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:raulmb@unex.es">raulmb@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Sofya S. Masharipova,</span>
+                        <span class="participant-name">Sofya S. Masharipova</span>
                         <span class="participant-affiliation">University of Pittsburgh at Johnstown, PA, USA (UPJ)</span>
+                        <a class="participant-email" href="mailto:smasharipova2026@gmail.com">smasharipova2026@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Daniel Morales González,</span>
+                        <span class="participant-name">Daniel Morales González</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:danmorg@unex.es">danmorg@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Emmanuel Moreno Mejía,</span>
+                        <span class="participant-name">Emmanuel Moreno Mejía</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:emorenom@unex.es">emorenom@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Yolanda Moreno Salguero,</span>
+                        <span class="participant-name">Yolanda Moreno Salguero</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:ymoreno@unex.es">ymoreno@unex.es</a>
                     </div>
-					<div class="participant-item">
-                        <span class="participant-name">David Muñoz Lahoz,</span>
+                    <div class="participant-item">
+                        <span class="participant-name">David Muñoz Lahoz</span>
                         <span class="participant-affiliation">Universidad Autónoma de Madrid, España</span>
+                        <a class="participant-email" href="mailto:davidmunozlahoz@gmail.com">davidmunozlahoz@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">José Navarro Garmendia,</span>
+                        <span class="participant-name">José Navarro Garmendia</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:navarrogarmendia@unex.es">navarrogarmendia@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Juan Antonio Navarro González,</span>
+                        <span class="participant-name">Juan Antonio Navarro González</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:navarro@unex.es">navarro@unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Raúl Pino,</span>
+                        <span class="participant-name">Raúl Pino</span>
                         <span class="participant-affiliation">Universidad de Oviedo, España</span>
+                        <a class="participant-email" href="mailto:pinoraul@uniovi.es">pinoraul@uniovi.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Grzegorz Plebanek,</span>
+                        <span class="participant-name">Grzegorz Plebanek</span>
                         <span class="participant-affiliation">Uniwersytet Wrocławski, Polska</span>
+                        <a class="participant-email" href="mailto:grzegorz.plebanek@math.uni.wroc.pl">grzegorz.plebanek@math.uni.wroc.pl</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Marina Polo Rodríguez,</span>
+                        <span class="participant-name">Marina Polo Rodríguez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:marinapolo5c@gmail.com">marinapolo5c@gmail.com</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Noé de Rancourt,</span>
+                        <span class="participant-name">Noé de Rancourt</span>
                         <span class="participant-affiliation">Université de Lille, France</span>
+                        <a class="participant-email" href="mailto:noe.derancourtdemimerandverny@univ-lille.fr">noe.derancourtdemimerandverny@univ-lille.fr</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Beata Randrianantoanina,</span>
+                        <span class="participant-name">Beata Randrianantoanina</span>
                         <span class="participant-affiliation">Miami University, USA</span>
+                        <a class="participant-email" href="mailto:randrib@miamioh.edu">randrib@miamioh.edu</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Jorge Rovira Pérez,</span>
+                        <span class="participant-name">Jorge Rovira Pérez</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:jrovirap@alumnos.unex.es">jrovirap@alumnos.unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Peter Scholze,</span>
+                        <span class="participant-name">Juan Bautista Sancho de Salas</span>
+                        <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:jsancho@unex.es">jsancho@unex.es</a>
+                    </div>
+                    <div class="participant-item">
+                        <span class="participant-name">Peter Scholze</span>
                         <span class="participant-affiliation">Universität Bonn, Deutschland</span>
+                        <a class="participant-email" href="mailto:scholze@mpim-bonn.mpg.de">scholze@mpim-bonn.mpg.de</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Pablo Torrado López,</span>
+                        <span class="participant-name">Pablo Torrado López</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:ptorradoz@alumnos.unex.es">ptorradoz@alumnos.unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Pedro Tradacete,</span>
+                        <span class="participant-name">Pedro Tradacete</span>
                         <span class="participant-affiliation">ICMAT, España</span>
+                        <a class="participant-email" href="mailto:pedro.tradacete@icmat.es">pedro.tradacete@icmat.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Roberto Trinidad,</span>
+                        <span class="participant-name">Roberto Trinidad</span>
                         <span class="participant-affiliation">IMUEX, España</span>
+                        <a class="participant-email" href="mailto:rtrinidaq@alumnos.unex.es">rtrinidaq@alumnos.unex.es</a>
                     </div>
                     <div class="participant-item">
-                        <span class="participant-name">Shukhrat M. Usmanov,</span>
+                        <span class="participant-name">Shukhrat M. Usmanov</span>
                         <span class="participant-affiliation">University of Pittsburgh at Johnstown, PA, USA (UPJ)</span>
+                        <a class="participant-email" href="mailto:susmanov2014@gmail.com">susmanov2014@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -2319,21 +2404,25 @@ details[open] .hotel-accordion-arrow {
             <div class="participants-block">
                 <h3 class="participants-subtitle">Pre-registered</h3>
                 <div class="participants-grid">
-					<div class="participant-item preregistered-item">
-                        <span class="participant-name">Eugene Bilokopytov,</span>
+                    <div class="participant-item preregistered-item">
+                        <span class="participant-name">Eugene Bilokopytov</span>
                         <span class="participant-affiliation">ICMAT, España</span>
+                        <a class="participant-email" href="mailto:erz888@gmail.com">erz888@gmail.com</a>
                     </div>
-					<div class="participant-item preregistered-item">
-                        <span class="participant-name">Siham Hachoum,</span>
+                    <div class="participant-item preregistered-item">
+                        <span class="participant-name">Siham Hachoum</span>
                         <span class="participant-affiliation">Hassan 2 University of Casablanca, Morocco</span>
+                        <a class="participant-email" href="mailto:sihamehachoum128@gmail.com">sihamehachoum128@gmail.com</a>
                     </div>
-					<div class="participant-item preregistered-item">
-                        <span class="participant-name">Wiesław Kubiś,</span>
+                    <div class="participant-item preregistered-item">
+                        <span class="participant-name">Wiesław Kubiś</span>
                         <span class="participant-affiliation">Institute of Mathematics, Czech Academy of Sciences, Czech Republic</span>
+                        <a class="participant-email" href="mailto:kubis@math.cas.cz">kubis@math.cas.cz</a>
                     </div>
-					<div class="participant-item preregistered-item">
-                        <span class="participant-name">Florence Lancien,</span>
+                    <div class="participant-item preregistered-item">
+                        <span class="participant-name">Florence Lancien</span>
                         <span class="participant-affiliation">Université Marie et Louis Pasteur, France</span>
+                        <a class="participant-email" href="mailto:florence.lancien@univ-fcomte.fr">florence.lancien@univ-fcomte.fr</a>
                     </div>
                 </div>
             </div>
